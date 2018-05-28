@@ -1,0 +1,13 @@
+##Magma, GetWalletsResponseXML
+billingAccounts
+Sample:
+
+<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>
+	<billingAccounts>
+		<walletAccount>
+			<currency>[_DV or _DB or _DH]</currency>
+			<balance>1</balance>
+		</walletAccounts>
+	</billingAccounts>
+	
+Not yet sure how to return all three
