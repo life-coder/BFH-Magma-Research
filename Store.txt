@@ -1,0 +1,37 @@
+The store appears to be quite interesting.
+
+The game would first request it using: GET: /ofb/products
+And this is a sample response containing 1 item:
+
+<products>
+    <product productId="3169">
+		<status>published</status>
+		<attributes>
+			<attribute name="Product Id" value="3169" />
+			<attribute name="Product Name" value="WEST_Custom_Item_3169" />
+			<attribute name="Short Description" value="WEST_Custom_Item_3169_ShortDesc" />
+			<attribute name="Long Description" value="WEST_Custom_Item_3169_LongDesc" />
+			<attribute name="entitlementTag" value="3169-UNLM-" />
+			<attribute name="groupName" value="BFHPC_Knife" />
+			<attribute name="duration" value="" />
+			<attribute name="durationType" value="" />
+			<attribute name="useCount" value="" />
+			<attribute name="sortKey" value="0" />
+		</attributes>
+		<productName>WEST_Custom_Item_3169</productName>
+		<pricePoints>
+			<pricePoint locale="en_US" priceType="SALE_PRICE" currencyType="VIRTUAL_REWARD" currency="_DV" price="1" startDate="" endDate="" />
+		</pricePoints>
+    </product>
+</products>
+
+To add more items, add them between the products tags. The id you can find in the appropriate objects xml in the server files.
+The store is able to check which kit the user uses before displaying the items.
+
+After pressing to buy an item it will request the following: Post: /ofb/purchase/{heroid}/{itemid}
+
+This must return "<success></success>" to indicate success.
+Upon successfull buying the backend should add the id and entitlementTag to the database and return it when needed.
+So the server may return it when a persona logs in, NOTE: ONLY WHEN A PERSONA LOGS IN, ENTITLEMENTS ARE BOUND ON PERSONA AND NOT ON ACCOUNT.
+
+The entitlementTag is the following for unlimited time: "ID-UNLM-"

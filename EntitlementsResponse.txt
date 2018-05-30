@@ -11,11 +11,10 @@ Possibilities:
 	success
 Sample:
 
-<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>
 <entitlements>
 	<entitlement>
 		<entitlementId>1</entitlementId>
-		<entitlementTag>WEST_Custom_Item_142</entitlementTag>
+		<entitlementTag>[ID]-UNLM-</entitlementTag>
 		<useCount>0</useCount>
 		<grantDate></grantDate>
 		<terminationDate></terminationDate>
