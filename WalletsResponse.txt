@@ -2,12 +2,17 @@
 billingAccounts
 Sample:
 
-<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>
 	<billingAccounts>
 		<walletAccount>
-			<currency>[_DV or _DB or _DH]</currency>
+			<currency>_DV</currency> //valor points
 			<balance>1</balance>
-		</walletAccounts>
+		</walletAccount>
+		<walletAccount>
+			<currency>_DB</currency> //battle funds
+			<balance>1</balance>
+		</walletAccount>
+		<walletAccount>
+			<currency>_DH</currency> //hero points
+			<balance>1</balance>
+		</walletAccount>
 	</billingAccounts>
-	
-Not yet sure how to return all three
